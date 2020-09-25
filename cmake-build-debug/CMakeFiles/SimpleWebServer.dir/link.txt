@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/SimpleWebServer.dir/main.cpp.o  -o SimpleWebServer  src/net/libnet.a 

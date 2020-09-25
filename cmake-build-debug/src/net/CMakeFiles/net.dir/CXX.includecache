@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/base/noncopyable.h
+
+../src/net/Channel.h
+src/base/noncopyable.h
+../src/net/src/base/noncopyable.h
+functional
+-
+
+../src/net/Epoller.h
+sys/epoll.h
+../src/net/sys/epoll.h
+vector
+-
+
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Epoller.cpp
+src/net/Epoller.h
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/Epoller.h
+src/net/Channel.h
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/Channel.h
+
