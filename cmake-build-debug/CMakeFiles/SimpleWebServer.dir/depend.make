@@ -5,4 +5,6 @@ CMakeFiles/SimpleWebServer.dir/main.cpp.o: ../src/net/Epoller.h
 CMakeFiles/SimpleWebServer.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SimpleWebServer.dir/main.cpp.o: ../src/net/EventLoop.h
 CMakeFiles/SimpleWebServer.dir/main.cpp.o: ../src/net/Server.h
+CMakeFiles/SimpleWebServer.dir/main.cpp.o: ../src/net/Socket.h
+CMakeFiles/SimpleWebServer.dir/main.cpp.o: ../src/net/TcpServer.h
 

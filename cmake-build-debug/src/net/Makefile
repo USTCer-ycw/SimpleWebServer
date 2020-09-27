@@ -280,6 +280,33 @@ Socket.cpp.s:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Socket.cpp.s
 .PHONY : Socket.cpp.s
 
+TcpServer.o: TcpServer.cpp.o
+
+.PHONY : TcpServer.o
+
+# target to build an object file
+TcpServer.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/TcpServer.cpp.o
+.PHONY : TcpServer.cpp.o
+
+TcpServer.i: TcpServer.cpp.i
+
+.PHONY : TcpServer.i
+
+# target to preprocess a source file
+TcpServer.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/TcpServer.cpp.i
+.PHONY : TcpServer.cpp.i
+
+TcpServer.s: TcpServer.cpp.s
+
+.PHONY : TcpServer.s
+
+# target to generate assembly for a file
+TcpServer.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/TcpServer.cpp.s
+.PHONY : TcpServer.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -304,6 +331,9 @@ help:
 	@echo "... Socket.o"
 	@echo "... Socket.i"
 	@echo "... Socket.s"
+	@echo "... TcpServer.o"
+	@echo "... TcpServer.i"
+	@echo "... TcpServer.s"
 .PHONY : help
 
 

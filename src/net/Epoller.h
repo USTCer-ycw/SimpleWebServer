@@ -21,17 +21,18 @@ namespace SimpleServer
         ~Epoll() = default;
 
     public:
-        void setEvent(Channel* channel);
+        bool addChannelToPoller(Channel* channel);
         void setEvent(int events);
         activeChannels& poll();
     private:
+        int epollfd_;
         struct epoll_event ev_;
 //        const int MAXFDS = 100000;
         activeChannels activeChannels_;
         EventLoop* loop_;
         int maxevents_;
         std::vector<struct epoll_event> eventList_;
-        int epollfd_;
+        std::vector<Channel*> channelMap_;
         int event_;
     };
 };

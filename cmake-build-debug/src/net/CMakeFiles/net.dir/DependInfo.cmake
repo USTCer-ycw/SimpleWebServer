@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/EventLoop.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/EventLoop.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Server.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Server.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Socket.cpp.o"
+  "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/TcpServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

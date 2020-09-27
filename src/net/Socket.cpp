@@ -16,12 +16,17 @@ void Socket::setNonBlock(int fd)
 {
     int oldfd = ::fcntl(fd,F_GETFL,0);
     oldfd |= O_NONBLOCK;
-    fcntl(fd,F_SETFL,oldfd);
+    int ret = fcntl(fd,F_SETFL,oldfd);
+    if(ret < 0)
+    {
+        printf("set nonblock error\n");
+    }
 }
 
 int Socket::CreateNonBlockFd()
 {
     int sockfd = ::socket(AF_INET,SOCK_STREAM,0);
+    printf("create listen fd %d\n",sockfd);
     setNonBlock(sockfd);
     return sockfd;
 }
@@ -59,6 +64,11 @@ int Socket::BindAndListen(int fd,int port)
     return 1;
 }
 
+void Socket::closeFd(int fd)
+{
+    ::close(fd);
+}
+
 int Socket::acceptSocket(int fd)
 {
     struct sockaddr_in client;
@@ -69,6 +79,11 @@ int Socket::acceptSocket(int fd)
 
 int Socket::readmessage(int fd,char* buf)
 {
-    int n = ::recv(fd,(void*)buf,64,0);
+    int n = ::recv(fd,buf,64,0);
+    printf("block recv over\n");
+    if(n < 0)
+    {
+        perror("recv");
+    }
     return n;
 }

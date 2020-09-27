@@ -1,2 +1,2 @@
-/usr/bin/ar qc libnet.a  CMakeFiles/net.dir/Channel.cpp.o CMakeFiles/net.dir/Epoller.cpp.o CMakeFiles/net.dir/EventLoop.cpp.o CMakeFiles/net.dir/Server.cpp.o CMakeFiles/net.dir/Socket.cpp.o
+/usr/bin/ar qc libnet.a  CMakeFiles/net.dir/Channel.cpp.o CMakeFiles/net.dir/Epoller.cpp.o CMakeFiles/net.dir/EventLoop.cpp.o CMakeFiles/net.dir/Server.cpp.o CMakeFiles/net.dir/Socket.cpp.o CMakeFiles/net.dir/TcpServer.cpp.o
 /usr/bin/ranlib libnet.a

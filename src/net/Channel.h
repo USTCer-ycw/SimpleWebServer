@@ -6,13 +6,15 @@
 #define SIMPLEWEBSERVER_CHANNEL_H
 #include "src/base/noncopyable.h"
 #include <functional>
+#include <memory>
 namespace SimpleServer
 {
     class EventLoop;
-    class Channel : noncopyable
+    class Channel : noncopyable,std::enable_shared_from_this<Channel>
     {
     private:
         using readCallBack = std::function<void()>;
+        using readMsgCallBack = std::function<void(char*)>;
         using writeCallBack = std::function<void()>;
         using connCallBack = std::function<void()>;
     public:
@@ -21,6 +23,7 @@ namespace SimpleServer
     public:
         void setEvent(int events) { events_ = events; }
         void setReadBack(readCallBack&& readCallBack) { readCallBack_ = std::move(readCallBack); }
+        void setReadMsgBack(readMsgCallBack&& readMsgCallBack) { readMsgCallBack_ = std::move(readMsgCallBack); }
         void setWriteBack(writeCallBack&& writeCallBack) { writeCallBack_ = std::move(writeCallBack); }
         void setConnBakc(connCallBack&& connCallBack) { connCallBack_ = std::move(connCallBack); }
 
@@ -51,6 +54,7 @@ namespace SimpleServer
     private:
         EventLoop* loop_;
         readCallBack readCallBack_;
+        readMsgCallBack readMsgCallBack_;
         writeCallBack writeCallBack_;
         connCallBack connCallBack_;
     };

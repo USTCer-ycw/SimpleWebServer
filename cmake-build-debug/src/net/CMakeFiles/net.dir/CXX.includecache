@@ -13,6 +13,8 @@ src/base/noncopyable.h
 ../src/net/src/base/noncopyable.h
 functional
 -
+memory
+-
 
 ../src/net/Epoller.h
 sys/epoll.h
@@ -20,9 +22,19 @@ sys/epoll.h
 vector
 -
 
-/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Epoller.cpp
+../src/net/EventLoop.h
 src/net/Epoller.h
-/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/Epoller.h
+../src/net/src/net/Epoller.h
+
+../src/net/Socket.h
+
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Channel.cpp
 src/net/Channel.h
 /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/Channel.h
+src/net/Epoller.h
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/Epoller.h
+src/net/Socket.h
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/Socket.h
+src/net/EventLoop.h
+/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/src/net/EventLoop.h
 

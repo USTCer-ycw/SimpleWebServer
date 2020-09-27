@@ -17,12 +17,13 @@ namespace SimpleServer
 
     public:
         void loop();
-
+        void addChannelToPoller(Channel* channel);
     public:
         void runInLoop();
     private:
         Epoll poller_;
         activeChannels activeChannels_;
+        bool quit_;
     };
 }
 

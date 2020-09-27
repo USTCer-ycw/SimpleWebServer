@@ -6,3 +6,5 @@ CMakeFiles/SimpleWebServer.dir/main.cpp.o
  /home/yaochuanwang/CLionProjects/SimpleWebServer/main.cpp
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/EventLoop.h
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Server.h
+ /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.h
+ /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.h

@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/net.dir/EventLoop.cpp.o"
   "CMakeFiles/net.dir/Server.cpp.o"
   "CMakeFiles/net.dir/Socket.cpp.o"
+  "CMakeFiles/net.dir/TcpServer.cpp.o"
   "libnet.a"
   "libnet.pdb"
 )

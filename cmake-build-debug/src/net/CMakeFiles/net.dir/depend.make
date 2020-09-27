@@ -4,6 +4,7 @@
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/base/noncopyable.h
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/Channel.h
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/Epoller.h
+src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/EventLoop.h
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/Channel.cpp
 
@@ -20,10 +21,16 @@ src/net/CMakeFiles/net.dir/EventLoop.cpp.o: ../src/net/EventLoop.h
 
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/base/noncopyable.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Channel.h
+src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Epoller.h
+src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/EventLoop.h
+src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Server.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Server.cpp
-src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Server.h
 
 src/net/CMakeFiles/net.dir/Socket.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/Socket.cpp.o: ../src/net/Socket.cpp
+
+src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/Server.h
+src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/TcpServer.cpp
+src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/TcpServer.h
 

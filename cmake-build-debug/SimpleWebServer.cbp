@@ -167,6 +167,12 @@
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.h">
 			<Option target="net"/>
 		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.h">
+			<Option target="net"/>
+		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

@@ -13,5 +13,6 @@ namespace Socket
     int BindAndListen(int fd,int port);
     int acceptSocket(int fd);
     int readmessage(int fd,char* buf);
+    void closeFd(int fd);
 }
 #endif //SIMPLEWEBSERVER_SOCKET_H
