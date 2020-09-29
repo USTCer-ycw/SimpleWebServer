@@ -15,6 +15,7 @@ namespace SimpleServer
     public:
         using readCallBack = std::function<void()>;
         using readMsgCallBack = std::function<void(char*)>;
+        using connNewCallBack = std::function<void(Channel*)>;
         using writeCallBack = std::function<void()>;
         using connCallBack = std::function<void()>;
     public:
@@ -31,6 +32,8 @@ namespace SimpleServer
 
         void setConnCallBack(const connCallBack &connCallBack);
 
+        void setConnNewCallBack(const connNewCallBack &connNewCallBack);
+
     public:
         void start();
 
@@ -39,9 +42,10 @@ namespace SimpleServer
         readMsgCallBack readMsgCallBack_;
         writeCallBack writeCallBack_;
         connCallBack connCallBack_;
-
+        connNewCallBack connNewCallBack_;
     public:
         void handleConn();
+        void handleNewConn();
         void handleRead();
         void handleReadMsg(char* buf);
 
@@ -50,6 +54,7 @@ namespace SimpleServer
 
     private:
         Channel* acceptChannel_;
+        int acceptfd_;
         activeChanels activeChanels_;
     };
 }

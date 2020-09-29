@@ -90,9 +90,22 @@ src/net/CMakeFiles/net.dir/Channel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/Channel.cpp.s"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Channel.cpp -o CMakeFiles/net.dir/Channel.cpp.s
 
+src/net/CMakeFiles/net.dir/Client.cpp.o: src/net/CMakeFiles/net.dir/flags.make
+src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/net/CMakeFiles/net.dir/Client.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/net.dir/Client.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.cpp
+
+src/net/CMakeFiles/net.dir/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/net.dir/Client.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.cpp > CMakeFiles/net.dir/Client.cpp.i
+
+src/net/CMakeFiles/net.dir/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/net.dir/Client.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.cpp -o CMakeFiles/net.dir/Client.cpp.s
+
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: src/net/CMakeFiles/net.dir/flags.make
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/net/Epoller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/net/CMakeFiles/net.dir/Epoller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/net/CMakeFiles/net.dir/Epoller.cpp.o"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/net.dir/Epoller.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Epoller.cpp
 
 src/net/CMakeFiles/net.dir/Epoller.cpp.i: cmake_force
@@ -105,7 +118,7 @@ src/net/CMakeFiles/net.dir/Epoller.cpp.s: cmake_force
 
 src/net/CMakeFiles/net.dir/EventLoop.cpp.o: src/net/CMakeFiles/net.dir/flags.make
 src/net/CMakeFiles/net.dir/EventLoop.cpp.o: ../src/net/EventLoop.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/net/CMakeFiles/net.dir/EventLoop.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/net/CMakeFiles/net.dir/EventLoop.cpp.o"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/net.dir/EventLoop.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/EventLoop.cpp
 
 src/net/CMakeFiles/net.dir/EventLoop.cpp.i: cmake_force
@@ -118,7 +131,7 @@ src/net/CMakeFiles/net.dir/EventLoop.cpp.s: cmake_force
 
 src/net/CMakeFiles/net.dir/Server.cpp.o: src/net/CMakeFiles/net.dir/flags.make
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/net/CMakeFiles/net.dir/Server.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/net/CMakeFiles/net.dir/Server.cpp.o"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/net.dir/Server.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Server.cpp
 
 src/net/CMakeFiles/net.dir/Server.cpp.i: cmake_force
@@ -131,7 +144,7 @@ src/net/CMakeFiles/net.dir/Server.cpp.s: cmake_force
 
 src/net/CMakeFiles/net.dir/Socket.cpp.o: src/net/CMakeFiles/net.dir/flags.make
 src/net/CMakeFiles/net.dir/Socket.cpp.o: ../src/net/Socket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/net/CMakeFiles/net.dir/Socket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/net/CMakeFiles/net.dir/Socket.cpp.o"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/net.dir/Socket.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.cpp
 
 src/net/CMakeFiles/net.dir/Socket.cpp.i: cmake_force
@@ -144,7 +157,7 @@ src/net/CMakeFiles/net.dir/Socket.cpp.s: cmake_force
 
 src/net/CMakeFiles/net.dir/TcpServer.cpp.o: src/net/CMakeFiles/net.dir/flags.make
 src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/TcpServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/net/CMakeFiles/net.dir/TcpServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/net/CMakeFiles/net.dir/TcpServer.cpp.o"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/net.dir/TcpServer.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.cpp
 
 src/net/CMakeFiles/net.dir/TcpServer.cpp.i: cmake_force
@@ -158,6 +171,7 @@ src/net/CMakeFiles/net.dir/TcpServer.cpp.s: cmake_force
 # Object files for target net
 net_OBJECTS = \
 "CMakeFiles/net.dir/Channel.cpp.o" \
+"CMakeFiles/net.dir/Client.cpp.o" \
 "CMakeFiles/net.dir/Epoller.cpp.o" \
 "CMakeFiles/net.dir/EventLoop.cpp.o" \
 "CMakeFiles/net.dir/Server.cpp.o" \
@@ -168,6 +182,7 @@ net_OBJECTS = \
 net_EXTERNAL_OBJECTS =
 
 src/net/libnet.a: src/net/CMakeFiles/net.dir/Channel.cpp.o
+src/net/libnet.a: src/net/CMakeFiles/net.dir/Client.cpp.o
 src/net/libnet.a: src/net/CMakeFiles/net.dir/Epoller.cpp.o
 src/net/libnet.a: src/net/CMakeFiles/net.dir/EventLoop.cpp.o
 src/net/libnet.a: src/net/CMakeFiles/net.dir/Server.cpp.o
@@ -175,7 +190,7 @@ src/net/libnet.a: src/net/CMakeFiles/net.dir/Socket.cpp.o
 src/net/libnet.a: src/net/CMakeFiles/net.dir/TcpServer.cpp.o
 src/net/libnet.a: src/net/CMakeFiles/net.dir/build.make
 src/net/libnet.a: src/net/CMakeFiles/net.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libnet.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libnet.a"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && $(CMAKE_COMMAND) -P CMakeFiles/net.dir/cmake_clean_target.cmake
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/net.dir/link.txt --verbose=$(VERBOSE)
 

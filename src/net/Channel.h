@@ -15,6 +15,7 @@ namespace SimpleServer
     private:
         using readCallBack = std::function<void()>;
         using readMsgCallBack = std::function<void(char*)>;
+        using connNewCallBack = std::function<void(Channel*)>;
         using writeCallBack = std::function<void()>;
         using connCallBack = std::function<void()>;
     public:
@@ -25,7 +26,8 @@ namespace SimpleServer
         void setReadBack(readCallBack&& readCallBack) { readCallBack_ = std::move(readCallBack); }
         void setReadMsgBack(readMsgCallBack&& readMsgCallBack) { readMsgCallBack_ = std::move(readMsgCallBack); }
         void setWriteBack(writeCallBack&& writeCallBack) { writeCallBack_ = std::move(writeCallBack); }
-        void setConnBakc(connCallBack&& connCallBack) { connCallBack_ = std::move(connCallBack); }
+        void setConnBack(connCallBack&& connCallBack) { connCallBack_ = std::move(connCallBack); }
+        void setConnNewBack(connNewCallBack&& connNewCallBack) { connNewCallBack_ = std::move(connNewCallBack); }
 
     public:
         int getEvents() const
@@ -57,6 +59,7 @@ namespace SimpleServer
         readMsgCallBack readMsgCallBack_;
         writeCallBack writeCallBack_;
         connCallBack connCallBack_;
+        connNewCallBack connNewCallBack_;
     };
 }
 

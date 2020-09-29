@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/net.dir/Channel.cpp.o"
+  "CMakeFiles/net.dir/Client.cpp.o"
   "CMakeFiles/net.dir/Epoller.cpp.o"
   "CMakeFiles/net.dir/EventLoop.cpp.o"
   "CMakeFiles/net.dir/Server.cpp.o"

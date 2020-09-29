@@ -143,6 +143,12 @@
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Channel.h">
 			<Option target="net"/>
 		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.h">
+			<Option target="net"/>
+		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Epoller.cpp">
 			<Option target="net"/>
 		</Unit>

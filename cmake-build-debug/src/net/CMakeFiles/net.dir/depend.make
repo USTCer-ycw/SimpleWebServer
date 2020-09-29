@@ -8,6 +8,10 @@ src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/EventLoop.h
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/Channel.cpp.o: ../src/net/Channel.cpp
 
+src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/Client.h
+src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/Socket.h
+src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/Client.cpp
+
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/base/noncopyable.h
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/net/Channel.h
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/net/Epoller.h

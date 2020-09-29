@@ -172,6 +172,33 @@ Channel.cpp.s:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Channel.cpp.s
 .PHONY : Channel.cpp.s
 
+Client.o: Client.cpp.o
+
+.PHONY : Client.o
+
+# target to build an object file
+Client.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Client.cpp.o
+.PHONY : Client.cpp.o
+
+Client.i: Client.cpp.i
+
+.PHONY : Client.i
+
+# target to preprocess a source file
+Client.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Client.cpp.i
+.PHONY : Client.cpp.i
+
+Client.s: Client.cpp.s
+
+.PHONY : Client.s
+
+# target to generate assembly for a file
+Client.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Client.cpp.s
+.PHONY : Client.cpp.s
+
 Epoller.o: Epoller.cpp.o
 
 .PHONY : Epoller.o
@@ -319,6 +346,9 @@ help:
 	@echo "... Channel.o"
 	@echo "... Channel.i"
 	@echo "... Channel.s"
+	@echo "... Client.o"
+	@echo "... Client.i"
+	@echo "... Client.s"
 	@echo "... Epoller.o"
 	@echo "... Epoller.i"
 	@echo "... Epoller.s"

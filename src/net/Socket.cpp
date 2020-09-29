@@ -3,14 +3,13 @@
 //
 
 #include "src/net/Socket.h"
-#include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/fcntl.h>
 #include <sys/socket.h>
 #include <memory.h>
 #include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <cstdlib>
+#include <cstdio>
 
 void Socket::setNonBlock(int fd)
 {
@@ -67,6 +66,14 @@ int Socket::BindAndListen(int fd,int port)
 void Socket::closeFd(int fd)
 {
     ::close(fd);
+
+
+}
+
+int Socket::shutdownWR(int fd)
+{
+    printf("close write\n");
+    return ::shutdown(fd,SHUT_WR);
 }
 
 int Socket::acceptSocket(int fd)
@@ -83,7 +90,42 @@ int Socket::readmessage(int fd,char* buf)
     printf("block recv over\n");
     if(n < 0)
     {
-        perror("recv");
+        perror("recv error");
+        return -1;
     }
     return n;
+}
+
+int Socket::sendmsg(int fd, const char *buf)
+{
+    int n = ::send(fd,buf,strlen(buf),0);
+    if(n < 0)
+    {
+        perror("send error");
+        return -1;
+    }
+    return n;
+}
+
+int Socket::Bind(sockaddr_in* addr)
+{
+    int fd = CreateNonBlockFd();
+    int ret = ::bind(fd,(sockaddr*)addr,static_cast<socklen_t>(sizeof(*addr)));
+    if(ret < 0)
+    {
+        perror("bind error");
+        return -1;
+    }
+    return fd;
+}
+
+int Socket::Connect(int fd,sockaddr_in* addr)
+{
+    int ret = ::connect(fd,(sockaddr*)addr,static_cast<socklen_t>(sizeof(*addr)));
+    if(ret < 0)
+    {
+        perror("connect error");
+        return -1;
+    }
+    return 1;
 }
