@@ -10,6 +10,7 @@ namespace SimpleServer
 {
     class EventLoop;
     class Channel;
+    class Connection;
     class Server
     {
     public:
@@ -18,9 +19,11 @@ namespace SimpleServer
         using connNewCallBack = std::function<void(Channel*)>;
         using writeCallBack = std::function<void()>;
         using connCallBack = std::function<void()>;
+        using onMessageBack = std::function<void (Connection&)>;
+        using msgCallBack = std::function<void(Channel*)>;
     public:
         Server(EventLoop* loop,int port);
-        ~Server() = default;
+        virtual ~Server() = default;
     private:
         EventLoop* loop_;
     public:
@@ -34,6 +37,10 @@ namespace SimpleServer
 
         void setConnNewCallBack(const connNewCallBack &connNewCallBack);
 
+        void setMessageBack(const onMessageBack& cb) { messageBack_ = cb; }
+
+        void setmsgCallBack(const msgCallBack& cb) { msgCallBack_ = cb; }
+
     public:
         void start();
 
@@ -43,6 +50,8 @@ namespace SimpleServer
         writeCallBack writeCallBack_;
         connCallBack connCallBack_;
         connNewCallBack connNewCallBack_;
+        onMessageBack messageBack_;
+        msgCallBack msgCallBack_;
     public:
         void handleConn();
         void handleNewConn();
@@ -56,6 +65,7 @@ namespace SimpleServer
         Channel* acceptChannel_;
         int acceptfd_;
         activeChanels activeChanels_;
+        std::vector<Connection*> connectList_;
     };
 }
 

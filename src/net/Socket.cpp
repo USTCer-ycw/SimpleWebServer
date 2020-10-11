@@ -10,7 +10,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <cstdio>
-
+#include <errno.h>
 void Socket::setNonBlock(int fd)
 {
     int oldfd = ::fcntl(fd,F_GETFL,0);
@@ -65,9 +65,8 @@ int Socket::BindAndListen(int fd,int port)
 
 void Socket::closeFd(int fd)
 {
+    printf("close\n");
     ::close(fd);
-
-
 }
 
 int Socket::shutdownWR(int fd)
@@ -86,25 +85,151 @@ int Socket::acceptSocket(int fd)
 
 int Socket::readmessage(int fd,char* buf)
 {
-    int n = ::recv(fd,buf,64,0);
-    printf("block recv over\n");
-    if(n < 0)
+    int left = 0, sum = 0;
+    int n = 0;
+    while (true)
     {
-        perror("recv error");
-        return -1;
+        if ((n = ::read(fd, buf, MAX_SIZE)) < 0)
+        {
+            int savedError = errno;
+            if (savedError == EAGAIN || savedError == EWOULDBLOCK)
+            {
+                return sum;
+            }
+            else if (savedError == EINTR) continue;
+            else
+            {
+                perror("read error");
+                return sum;
+            }
+        }
+        else if (n == 0)
+        {
+            return sum;
+        }
+        sum += n;
+        buf += MAX_SIZE;
     }
-    return n;
+    return sum;
+//    int n = ::recv(fd,buf,64,0);
+//    printf("block recv over\n");
+//    if(n < 0)
+//    {
+//        perror("recv error");
+//        return -1;
+//    }
+//    return n;
 }
 
 int Socket::sendmsg(int fd, const char *buf)
 {
-    int n = ::send(fd,buf,strlen(buf),0);
+//    int n = ::send(fd,buf,strlen(buf),0);
+    int n = ::write(fd, buf, strlen(buf));
     if(n < 0)
     {
         perror("send error");
         return -1;
     }
     return n;
+}
+
+int Socket::sendmessage(int fd, char *buf, size_t bytes)
+{
+    int nleft = bytes, nsend = 0;
+    int n = 0;
+    while (nleft > 0)
+    {
+        if ((n = ::write(fd, buf, bytes)) < 0)
+        {
+            int savedErrno = errno;
+            if (savedErrno == EAGAIN || savedErrno == EWOULDBLOCK)
+            {
+                break;
+            }
+            else if (savedErrno == EINTR)
+            {
+                continue;
+            }
+        }
+        else if (n == 0)
+        {
+            break;
+        }
+        nleft -= n;
+        bytes -= n;
+        nsend += n;
+        buf += n;
+    }
+    return nsend;
+}
+
+int Socket::readmessage(int fd, Buffer &buffer)
+{
+    int n = 0;
+    int curr = 0;
+    Buffer::size_type readablesize = buffer.size();
+    int sum = 0;
+    while (true)
+    {
+        if ((n = ::read(fd, &buffer[curr], static_cast<size_t>(readablesize))) < 0)
+        {
+            int savedErrno = errno;
+            if (savedErrno == EAGAIN || savedErrno == EWOULDBLOCK)
+            {
+                buffer.resize(sum);
+                return sum;
+            }
+            else if (savedErrno == EINTR)
+            {
+                break;
+            }
+        }
+        else if (n == 0)
+        {
+            buffer.resize(sum);
+            return sum;
+        }
+        // buffer.size() always >= sum
+        sum += n;
+        curr += n;
+        readablesize = buffer.size() - curr;
+        if(readablesize < buffer.size()/2)
+        {
+            buffer.resize(buffer.size() * 2);
+            readablesize = buffer.size() - curr;
+        }
+    }
+    buffer.resize(sum);
+    return sum;
+}
+
+int Socket::sendmessage(int fd, Buffer &buffer)
+{
+    int nleft = buffer.size();
+    int curr = 0;
+    int n = 0;
+    while (nleft > 0)
+    {
+        if ((n = ::write(fd, &buffer[curr], nleft)) < 0)
+        {
+            int savedErrno = errno;
+            if (savedErrno == EAGAIN || savedErrno == EWOULDBLOCK)
+            {
+                break;
+            }
+            else if (savedErrno == EINTR)
+            {
+                continue;
+            }
+        }
+        else if (n == 0)
+        {
+            break;
+        }
+        nleft -= n;
+        curr += n;
+    }
+    return curr;
 }
 
 int Socket::Bind(sockaddr_in* addr)

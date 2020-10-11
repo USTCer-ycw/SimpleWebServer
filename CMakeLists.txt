@@ -9,6 +9,8 @@ add_subdirectory(src/net)
 
 #add_subdirectory(src/base)
 
+add_definitions(-g)
+
 add_executable(SimpleWebServer main.cpp)
 
 target_link_libraries(SimpleWebServer net)

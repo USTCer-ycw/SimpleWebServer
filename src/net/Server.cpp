@@ -6,6 +6,7 @@
 #include "src/net/Socket.h"
 #include "src/net/Channel.h"
 #include "src/net/EventLoop.h"
+#include "src/net/Connection.h"
 using namespace SimpleServer;
 
 Server::Server(EventLoop *loop, int port):
@@ -33,12 +34,14 @@ void Server::handleRead()
     char message[64];
     int fd = acceptChannel_->getSockfd();
     int n = Socket::readmessage(fd,message);
+    printf("%s  line %d\n", __FILE__, __LINE__);
     printf("read %d bytes, %s\n",n,message);
 }
 
 void Server::handleReadMsg(char* buf)
 {
-    readMsgCallBack_(buf);
+    if(readCallBack_)
+        readMsgCallBack_(buf);
 }
 
 void Server::handleConn()
@@ -59,8 +62,10 @@ void Server::handleNewConn()
 {
     Channel* channel = new Channel(loop_);
     channel->setSockfd(Socket::acceptSocket(acceptfd_));
+    Socket::setNonBlock(channel->getSockfd());
     channel->setReadMsgBack(std::bind(&Server::handleReadMsg,this,std::placeholders::_1));
-    channel->setEvent(EPOLLIN | EPOLLRDHUP | EPOLLOUT | EPOLLET);
+    channel->setmsgCallBack(msgCallBack_);
+    channel->setEvent(EPOLLIN | EPOLLET);
     loop_->addChannelToPoller(channel);
 }
 
