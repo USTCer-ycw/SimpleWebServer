@@ -10,6 +10,7 @@
 //#include <sys/fcntl.h>
 //#include <memory.h>
 #include <unistd.h>
+#include <src/net/Connection.h>
 
 #include "src/net/Socket.h"
 using namespace SimpleServer;
@@ -27,6 +28,12 @@ void onMessage(Channel* ch)
     printf("getInpput:%s", ch->getInput().data());
 
     ch->send(ch->getInput());
+}
+
+void onConnect(const ConnectionPtr &connection)
+{
+    cout << connection->getPeer() << endl;
+//    connection->shutdownWR();
 }
 
 void test()
@@ -63,7 +70,7 @@ void testServer()
     EventLoop loop;
     Server server(&loop,2000);
 //    server.setReadMsgCallBack(std::bind(readback,std::placeholders::_1));
-    server.setmsgCallBack(std::bind(onMessage, std::placeholders::_1));
+    server.setOnConnect(std::bind(onConnect, std::placeholders::_1));
     server.start();
     loop.loop();
 }

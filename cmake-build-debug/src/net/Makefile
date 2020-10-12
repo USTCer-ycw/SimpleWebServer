@@ -199,6 +199,33 @@ Client.cpp.s:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Client.cpp.s
 .PHONY : Client.cpp.s
 
+Connection.o: Connection.cpp.o
+
+.PHONY : Connection.o
+
+# target to build an object file
+Connection.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Connection.cpp.o
+.PHONY : Connection.cpp.o
+
+Connection.i: Connection.cpp.i
+
+.PHONY : Connection.i
+
+# target to preprocess a source file
+Connection.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Connection.cpp.i
+.PHONY : Connection.cpp.i
+
+Connection.s: Connection.cpp.s
+
+.PHONY : Connection.s
+
+# target to generate assembly for a file
+Connection.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Connection.cpp.s
+.PHONY : Connection.cpp.s
+
 Epoller.o: Epoller.cpp.o
 
 .PHONY : Epoller.o
@@ -361,33 +388,6 @@ Socket.cpp.s:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/Socket.cpp.s
 .PHONY : Socket.cpp.s
 
-TcpConnect.o: TcpConnect.cpp.o
-
-.PHONY : TcpConnect.o
-
-# target to build an object file
-TcpConnect.cpp.o:
-	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/TcpConnect.cpp.o
-.PHONY : TcpConnect.cpp.o
-
-TcpConnect.i: TcpConnect.cpp.i
-
-.PHONY : TcpConnect.i
-
-# target to preprocess a source file
-TcpConnect.cpp.i:
-	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/TcpConnect.cpp.i
-.PHONY : TcpConnect.cpp.i
-
-TcpConnect.s: TcpConnect.cpp.s
-
-.PHONY : TcpConnect.s
-
-# target to generate assembly for a file
-TcpConnect.cpp.s:
-	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/TcpConnect.cpp.s
-.PHONY : TcpConnect.cpp.s
-
 TcpServer.o: TcpServer.cpp.o
 
 .PHONY : TcpServer.o
@@ -430,6 +430,9 @@ help:
 	@echo "... Client.o"
 	@echo "... Client.i"
 	@echo "... Client.s"
+	@echo "... Connection.o"
+	@echo "... Connection.i"
+	@echo "... Connection.s"
 	@echo "... Epoller.o"
 	@echo "... Epoller.i"
 	@echo "... Epoller.s"
@@ -448,9 +451,6 @@ help:
 	@echo "... Socket.o"
 	@echo "... Socket.i"
 	@echo "... Socket.s"
-	@echo "... TcpConnect.o"
-	@echo "... TcpConnect.i"
-	@echo "... TcpConnect.s"
 	@echo "... TcpServer.o"
 	@echo "... TcpServer.i"
 	@echo "... TcpServer.s"

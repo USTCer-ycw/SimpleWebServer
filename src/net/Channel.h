@@ -14,28 +14,15 @@ namespace SimpleServer
     class Connection;
     class Channel : noncopyable,std::enable_shared_from_this<Channel>
     {
-    private:
-        using readCallBack = std::function<void()>;
-        using readMsgCallBack = std::function<void(char*)>;
-        using connNewCallBack = std::function<void(Channel*)>;
-        using writeCallBack = std::function<void()>;
-        using connCallBack = std::function<void()>;
-        using onMessageBack = std::function<void(Connection&)>;
-        using msgCallBack = std::function<void(Channel *)>;
     public:
         Channel(EventLoop *loop, int fd);
         Channel(EventLoop* loop);
     public:
         void setEvent(int events) { events_ = events; }
-        void setReadBack(readCallBack&& readCallBack) { readCallBack_ = std::move(readCallBack); }
-        void setReadMsgBack(readMsgCallBack&& readMsgCallBack) { readMsgCallBack_ = std::move(readMsgCallBack); }
-        void setWriteBack(writeCallBack&& writeCallBack) { writeCallBack_ = std::move(writeCallBack); }
-        void setConnBack(connCallBack&& connCallBack) { connCallBack_ = std::move(connCallBack); }
-        void setConnNewBack(connNewCallBack&& connNewCallBack) { connNewCallBack_ = std::move(connNewCallBack); }
-        void setMessageBack(onMessageBack&& cb) { messageBack_ = std::move(cb); }
-        void setmsgCallBack(const msgCallBack& cb) { msgCallBack_ = cb; }
-
-
+        void sethandleRead(handleRead&& cb) { readcallback_ = cb; }
+        void sethandleWrite(handleWrite&& cb) { writecallback_ = cb; }
+        void sethandleError(handleError&& cb) { errorcallback_ = cb; }
+        void sethandleClose(handleClose&& cb) { closecallback_ = cb; }
     public:
         int getEvents() const
         {
@@ -64,13 +51,10 @@ namespace SimpleServer
 
     private:
         EventLoop* loop_;
-        readCallBack readCallBack_;
-        readMsgCallBack readMsgCallBack_;
-        writeCallBack writeCallBack_;
-        connCallBack connCallBack_;
-        connNewCallBack connNewCallBack_;
-        onMessageBack messageBack_;
-        msgCallBack msgCallBack_;
+        handleRead readcallback_;
+        handleWrite writecallback_;
+        handleError errorcallback_;
+        handleClose closecallback_;
 //        char* buffer_;
         Socket::Buffer::size_type defaultsize_;
         Socket::Buffer buffer_;

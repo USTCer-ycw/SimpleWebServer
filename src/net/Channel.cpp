@@ -25,24 +25,24 @@ defaultsize_(128)
 void Channel::handleReadback()
 {
     char buf[64] = {'\0'};
-    if(msgCallBack_)
-    {
-        printf("condfd:%d\n",this->sockfd_);
-        int n = Socket::readmessage(sockfd_, buffer_);
-        msgCallBack_(this);
-        return;
-    }
-    if(readMsgCallBack_)
+//    if(msgCallBack_)
+//    {
+//        printf("condfd:%d\n",this->sockfd_);
+//        int n = Socket::readmessage(sockfd_, buffer_);
+//        msgCallBack_(this);
+//        return;
+//    }
+    if(readcallback_)
     {
         int n = Socket::readmessage(sockfd_,buf);
         printf("%s  line %d ", __FILE__, __LINE__);
         printf("read %d bytes\n",n);
-        readMsgCallBack_(buf);
+        readcallback_();
     }
-    else
-    {
-        readCallBack_();
-    }
+//    else
+//    {
+//        readCallBack_();
+//    }
 //    if(sockfd_ == 4)
 //    {
 //        int connfd = Socket::acceptSocket(this->getSockfd());
@@ -74,13 +74,15 @@ const int IN_BUT_PEER_CLOSE = EPOLLIN & (~EPOLLRDHUP);
 printf("revent:%d\n",revents_);
     if(revents_ & EPOLLHUP)
     {
+        printf("%d\n", EPOLLHUP);
+        printf("EPOLLHUP\n");
+        return;
         Socket::closeFd(sockfd_);
         return;
     }
     if(revents_ & EPOLLRDHUP){
         Socket::shutdownWR(sockfd_);
     }
-
     if(revents_ & (EPOLLIN | EPOLLPRI) && !(revents_ & EPOLLRDHUP))
         handleReadback();
     else if(revents_ & EPOLLOUT)

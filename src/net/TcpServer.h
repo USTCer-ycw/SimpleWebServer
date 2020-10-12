@@ -25,8 +25,8 @@ namespace SimpleServer
 
     private:
         readCallBack readCallBack_;
-        writeCallBack writeCallBack_;
-        connCallBack connCallBack_;
+//        writeCallBack writeCallBack_;
+//        connCallBack connCallBack_;
     };
 }
 

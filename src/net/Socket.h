@@ -7,6 +7,22 @@
 
 #include <arpa/inet.h>
 #include <vector>
+#include <memory>
+#include <functional>
+namespace SimpleServer
+{
+    class Connection;
+    class Channel;
+
+    using ConnectionPtr = std::shared_ptr<Connection>;
+    using ChannelPtr = std::shared_ptr<Channel>;
+    using onConnectCB = std::function<void(const ConnectionPtr &)>;
+    using onMessageCB = std::function<void(const ConnectionPtr &)>;
+    using handleRead = std::function<void()>;
+    using handleWrite = std::function<void()>;
+    using handleError = std::function<void()>;
+    using handleClose = std::function<void()>;
+}
 
 namespace Socket
 {
@@ -23,6 +39,7 @@ namespace Socket
     int sendmessage(int fd, Buffer& buffer);
     void closeFd(int fd);
     int shutdownWR(int fd);
+    char* getPeerInfo(int fd);
     int Bind(sockaddr_in* addr);
     int Connect(int fd,sockaddr_in* addr);
 }

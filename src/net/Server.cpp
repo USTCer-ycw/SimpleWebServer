@@ -15,15 +15,14 @@ acceptChannel_(new Channel(loop,Socket::CreateNonBlockFd())),
 acceptfd_(acceptChannel_->getSockfd())
 {
     Socket::BindAndListen(acceptChannel_->getSockfd(),port);
-    acceptChannel_->setReadBack(std::bind(&Server::handleRead,this));
+    acceptChannel_->sethandleRead(std::bind(&Server::handleNewConn, this));
     acceptChannel_->setEvent(EPOLLIN | EPOLLET);
 }
 
 void Server::start()
 {
     using std::placeholders::_1;
-    acceptChannel_->setConnBack(std::bind(&Server::handleNewConn,this));
-    acceptChannel_->setReadBack(std::bind(&Server::handleNewConn,this));
+//    acceptChannel_->sethandleRead(std::bind(&Server::handleNewConn, this));
 //    acceptChannel_->setConnNewBack(std::bind(&Server::handleNewConn,this,_1));
 //    acceptChannel_->setReadMsgBack(std::bind(&Server::handleReadMsg,this,_1));
     loop_->addChannelToPoller(acceptChannel_);
@@ -40,19 +39,19 @@ void Server::handleRead()
 
 void Server::handleReadMsg(char* buf)
 {
-    if(readCallBack_)
-        readMsgCallBack_(buf);
+//    if(readCallBack_)
+//        readMsgCallBack_(buf);
 }
 
 void Server::handleConn()
 {
 
-    if(connCallBack_)
-        connCallBack_();
-    else
-    {
-       printf("new conn\n");
-    }
+//    if(connCallBack_)
+//        connCallBack_();
+//    else
+//    {
+//       printf("new conn\n");
+//    }
 
 //    channel->setSockfd(Socket::acceptSocket())
 //    channel->setReadMsgBack(std::bind())
@@ -60,36 +59,31 @@ void Server::handleConn()
 
 void Server::handleNewConn()
 {
-    Channel* channel = new Channel(loop_);
-    channel->setSockfd(Socket::acceptSocket(acceptfd_));
-    Socket::setNonBlock(channel->getSockfd());
-    channel->setReadMsgBack(std::bind(&Server::handleReadMsg,this,std::placeholders::_1));
-    channel->setmsgCallBack(msgCallBack_);
-    channel->setEvent(EPOLLIN | EPOLLET);
-    loop_->addChannelToPoller(channel);
+    int acceptfd = 0;
+    while ((acceptfd = Socket::acceptSocket(acceptfd_)) > 0)
+    {
+        ConnectionPtr accPtr = std::make_shared<Connection>(loop_, acceptfd);
+        accPtr->setOnConnectCB(connectBack_);
+        Socket::setNonBlock(acceptfd);
+        connectionMap_[acceptfd] = accPtr;
+        connectBack_(accPtr);
+    }
+
+//    Channel* channel = new Channel(loop_);
+//    channel->setSockfd(Socket::acceptSocket(acceptfd));
+//    Socket::setNonBlock(channel->getSockfd());
+//    channel->setReadMsgBack(std::bind(&Server::handleReadMsg,this,std::placeholders::_1));
+//    channel->setmsgCallBack(msgCallBack_);
+//    channel->setEvent(EPOLLIN | EPOLLET);
+//    loop_->addChannelToPoller(channel);
 }
 
-void Server::setReadCallBack(const Server::readCallBack &readCallBack)
+void Server::defaultMeeageCB(const ConnectionPtr &conn)
 {
-    readCallBack_ = readCallBack;
+    printf("recv : %s\n", conn->getInput().data());
 }
 
-void Server::setReadMsgCallBack(const readMsgCallBack &readMsgCallBack)
+void Server::defaultConnectCB(const ConnectionPtr &conn)
 {
-    readMsgCallBack_ = readMsgCallBack;
-}
 
-void Server::setWriteCallBack(const Server::writeCallBack &writeCallBack)
-{
-    writeCallBack_ = writeCallBack;
-}
-
-void Server::setConnCallBack(const Server::connCallBack &connCallBack)
-{
-    connCallBack_ = connCallBack;
-}
-
-void Server::setConnNewCallBack(const connNewCallBack &connNewCallBack)
-{
-    connNewCallBack_ = connNewCallBack;
 }

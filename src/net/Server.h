@@ -4,8 +4,11 @@
 
 #ifndef SIMPLEWEBSERVER_SERVER_H
 #define SIMPLEWEBSERVER_SERVER_H
+#include "src/net/Socket.h"
 #include <functional>
 #include <vector>
+#include <memory>
+#include <map>
 namespace SimpleServer
 {
     class EventLoop;
@@ -14,58 +17,35 @@ namespace SimpleServer
     class Server
     {
     public:
-        using readCallBack = std::function<void()>;
-        using readMsgCallBack = std::function<void(char*)>;
-        using connNewCallBack = std::function<void(Channel*)>;
-        using writeCallBack = std::function<void()>;
-        using connCallBack = std::function<void()>;
-        using onMessageBack = std::function<void (Connection&)>;
-        using msgCallBack = std::function<void(Channel*)>;
-    public:
         Server(EventLoop* loop,int port);
         virtual ~Server() = default;
     private:
         EventLoop* loop_;
     public:
-        void setReadCallBack(const readCallBack &readCallBack);
-
-        void setReadMsgCallBack(const readMsgCallBack& readMsgCallBack);
-
-        void setWriteCallBack(const writeCallBack &writeCallBack);
-
-        void setConnCallBack(const connCallBack &connCallBack);
-
-        void setConnNewCallBack(const connNewCallBack &connNewCallBack);
-
-        void setMessageBack(const onMessageBack& cb) { messageBack_ = cb; }
-
-        void setmsgCallBack(const msgCallBack& cb) { msgCallBack_ = cb; }
-
+        void setOnConnect(const onConnectCB& cb) { connectBack_ = cb; }
+        void setOnMessage(const onMessageCB& cb) { messageBack_ = cb; }
     public:
         void start();
 
     private:
-        readCallBack readCallBack_;
-        readMsgCallBack readMsgCallBack_;
-        writeCallBack writeCallBack_;
-        connCallBack connCallBack_;
-        connNewCallBack connNewCallBack_;
-        onMessageBack messageBack_;
-        msgCallBack msgCallBack_;
+        onConnectCB connectBack_;
+        onMessageCB messageBack_;
     public:
         void handleConn();
         void handleNewConn();
         void handleRead();
         void handleReadMsg(char* buf);
-
+        void defaultMeeageCB(const ConnectionPtr &conn);
+        void defaultConnectCB(const ConnectionPtr& conn);
     private:
         using activeChanels = std::vector<Channel*>;
-
+        using ConnectionMap = std::map<int,ConnectionPtr>;
     private:
         Channel* acceptChannel_;
         int acceptfd_;
         activeChanels activeChanels_;
         std::vector<Connection*> connectList_;
+        ConnectionMap connectionMap_;
     };
 }
 

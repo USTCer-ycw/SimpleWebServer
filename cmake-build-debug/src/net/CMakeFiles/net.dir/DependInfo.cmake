@@ -6,13 +6,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Channel.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Channel.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Client.cpp.o"
+  "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Connection.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Connection.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Epoller.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Epoller.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/EventLoop.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/EventLoop.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/EventLoopThread.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/EventLoopThread.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/EventLoopThreadPool.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/EventLoopThreadPool.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Server.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Server.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/Socket.cpp.o"
-  "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpConnect.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/TcpConnect.cpp.o"
   "/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.cpp" "/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir/TcpServer.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -149,6 +149,12 @@
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.h">
 			<Option target="net"/>
 		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Connection.cpp">
+			<Option target="net"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Connection.h">
+			<Option target="net"/>
+		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Epoller.cpp">
 			<Option target="net"/>
 		</Unit>
@@ -183,12 +189,6 @@
 			<Option target="net"/>
 		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.h">
-			<Option target="net"/>
-		</Unit>
-		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpConnect.cpp">
-			<Option target="net"/>
-		</Unit>
-		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpConnect.h">
 			<Option target="net"/>
 		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.cpp">

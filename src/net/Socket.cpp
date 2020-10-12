@@ -254,3 +254,12 @@ int Socket::Connect(int fd,sockaddr_in* addr)
     }
     return 1;
 }
+
+char * Socket::getPeerInfo(int fd)
+{
+    sockaddr_in addr;
+    memset(&addr, 0, sizeof(addr));
+    socklen_t len = sizeof(addr);
+    getpeername(fd, (sockaddr *) &addr, &len);
+    return inet_ntoa(addr.sin_addr);
+}

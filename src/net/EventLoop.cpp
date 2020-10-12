@@ -33,7 +33,7 @@ void EventLoop::runInLoop()
 {
     for(int i=0;i<activeChannels_.size();++i)
     {
-//        activeChannels_[i]->setReadBack(std::bind())
+//        activeChannels_[i]->setReadHandler(std::bind())
         activeChannels_[i]->handleEvent();
     }
 }

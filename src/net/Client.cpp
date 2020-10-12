@@ -18,7 +18,7 @@ connectchannel_(new Channel(loop))
     fd_ = Socket::CreateNonBlockFd();
     connectchannel_->setSockfd(fd_);
     connectchannel_->setEvent(EPOLLIN  | EPOLLPRI | EPOLLRDHUP | EPOLLOUT | EPOLLET);
-    connectchannel_->setReadMsgBack(std::bind(&Client::defaultreadback,this,std::placeholders::_1));
+//    connectchannel_->sethandleRead(std::bind(&Client::defaultreadback,this,std::placeholders::_1));
     loop_->addChannelToPoller(connectchannel_.get());
     memset(&clientaddr_,0,sizeof(clientaddr_));
     clientaddr_.sin_family = AF_INET;
@@ -95,7 +95,7 @@ void Client::sendStr(const string&& msg)
 void Client::setReadCallBack(const Client::ReadCallBack &readCallBack)
 {
     readCallBack_ = readCallBack;
-    connectchannel_->setReadMsgBack(std::bind(&Client::handleread,this,std::placeholders::_1));
+//    connectchannel_->setReadMsgBack(std::bind(&Client::handleread,this,std::placeholders::_1));
 }
 
 void Client::setWriteCallBack(const Client::WriteCallBack &writeCallBack)
