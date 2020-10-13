@@ -16,6 +16,14 @@ src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/EventLoop.h
 src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/Client.cpp.o: ../src/net/Client.cpp
 
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/base/noncopyable.h
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/net/Channel.h
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/net/Connection.h
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/net/Epoller.h
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/net/EventLoop.h
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/net/Socket.h
+src/net/CMakeFiles/net.dir/Connection.cpp.o: ../src/net/Connection.cpp
+
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/base/noncopyable.h
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/net/Channel.h
 src/net/CMakeFiles/net.dir/Epoller.cpp.o: ../src/net/Epoller.h
@@ -37,21 +45,18 @@ src/net/CMakeFiles/net.dir/EventLoopThreadPool.cpp.o: ../src/net/EventLoopThread
 
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/base/noncopyable.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Channel.h
+src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Connection.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Epoller.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/EventLoop.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Server.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Socket.h
-src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/TcpConnect.h
 src/net/CMakeFiles/net.dir/Server.cpp.o: ../src/net/Server.cpp
 
 src/net/CMakeFiles/net.dir/Socket.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/Socket.cpp.o: ../src/net/Socket.cpp
 
-src/net/CMakeFiles/net.dir/TcpConnect.cpp.o: ../src/base/noncopyable.h
-src/net/CMakeFiles/net.dir/TcpConnect.cpp.o: ../src/net/TcpConnect.cpp
-src/net/CMakeFiles/net.dir/TcpConnect.cpp.o: ../src/net/TcpConnect.h
-
 src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/Server.h
+src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/Socket.h
 src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/TcpServer.cpp
 src/net/CMakeFiles/net.dir/TcpServer.cpp.o: ../src/net/TcpServer.h
 

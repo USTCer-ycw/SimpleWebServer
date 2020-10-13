@@ -4,3 +4,6 @@
 /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/rebuild_cache.dir
 /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/edit_cache.dir
 /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/CMakeFiles/net.dir
+/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/CMakeFiles/rebuild_cache.dir
+/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/CMakeFiles/edit_cache.dir
+/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/CMakeFiles/base.dir

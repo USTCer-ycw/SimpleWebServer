@@ -5,7 +5,7 @@
 		<Option title="SimpleWebServer"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\net\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\net\;CMake Files\src\base\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug"/>
@@ -133,9 +133,69 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/net/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="base">
+				<Option output="/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/libbase.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/yaochuanwang/CLionProjects/SimpleWebServer"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 base"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="base/fast">
+				<Option output="/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/libbase.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/yaochuanwang/CLionProjects/SimpleWebServer"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 base/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/main.cpp">
 			<Option target="SimpleWebServer"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/FileUtil.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/FileUtil.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogFile.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogFile.h">
+			<Option target="base"/>
 		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Channel.cpp">
 			<Option target="net"/>
@@ -202,6 +262,9 @@
 		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\net\"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\base\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

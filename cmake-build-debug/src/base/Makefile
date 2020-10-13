@@ -145,6 +145,60 @@ base/fast:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/build
 .PHONY : base/fast
 
+FileUtil.o: FileUtil.cpp.o
+
+.PHONY : FileUtil.o
+
+# target to build an object file
+FileUtil.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/FileUtil.cpp.o
+.PHONY : FileUtil.cpp.o
+
+FileUtil.i: FileUtil.cpp.i
+
+.PHONY : FileUtil.i
+
+# target to preprocess a source file
+FileUtil.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/FileUtil.cpp.i
+.PHONY : FileUtil.cpp.i
+
+FileUtil.s: FileUtil.cpp.s
+
+.PHONY : FileUtil.s
+
+# target to generate assembly for a file
+FileUtil.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/FileUtil.cpp.s
+.PHONY : FileUtil.cpp.s
+
+LogFile.o: LogFile.cpp.o
+
+.PHONY : LogFile.o
+
+# target to build an object file
+LogFile.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogFile.cpp.o
+.PHONY : LogFile.cpp.o
+
+LogFile.i: LogFile.cpp.i
+
+.PHONY : LogFile.i
+
+# target to preprocess a source file
+LogFile.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogFile.cpp.i
+.PHONY : LogFile.cpp.i
+
+LogFile.s: LogFile.cpp.s
+
+.PHONY : LogFile.s
+
+# target to generate assembly for a file
+LogFile.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogFile.cpp.s
+.PHONY : LogFile.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -154,6 +208,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... base"
+	@echo "... FileUtil.o"
+	@echo "... FileUtil.i"
+	@echo "... FileUtil.s"
+	@echo "... LogFile.o"
+	@echo "... LogFile.i"
+	@echo "... LogFile.s"
 .PHONY : help
 
 

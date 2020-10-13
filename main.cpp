@@ -13,6 +13,7 @@
 #include <src/net/Connection.h>
 
 #include "src/net/Socket.h"
+#include "src/base/FileUtil.h"
 using namespace SimpleServer;
 using namespace std;
 
@@ -86,6 +87,7 @@ void testClient()
 #include <memory.h>
 int main()
 {
+//    AppendFile file("test.txt");
     printf("%s  line %d\n", __FILE__, __LINE__);
     testServer();
     Socket::Buffer buffer;

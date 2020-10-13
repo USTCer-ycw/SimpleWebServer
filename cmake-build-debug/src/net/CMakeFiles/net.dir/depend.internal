@@ -16,6 +16,14 @@ src/net/CMakeFiles/net.dir/Client.cpp.o
  ../src/net/EventLoop.h
  ../src/net/Socket.h
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Client.cpp
+src/net/CMakeFiles/net.dir/Connection.cpp.o
+ ../src/base/noncopyable.h
+ ../src/net/Channel.h
+ ../src/net/Connection.h
+ ../src/net/Epoller.h
+ ../src/net/EventLoop.h
+ ../src/net/Socket.h
+ /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Connection.cpp
 src/net/CMakeFiles/net.dir/Epoller.cpp.o
  ../src/base/noncopyable.h
  ../src/net/Channel.h
@@ -38,20 +46,17 @@ src/net/CMakeFiles/net.dir/EventLoopThreadPool.cpp.o
 src/net/CMakeFiles/net.dir/Server.cpp.o
  ../src/base/noncopyable.h
  ../src/net/Channel.h
+ ../src/net/Connection.h
  ../src/net/Epoller.h
  ../src/net/EventLoop.h
  ../src/net/Server.h
  ../src/net/Socket.h
- ../src/net/TcpConnect.h
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Server.cpp
 src/net/CMakeFiles/net.dir/Socket.cpp.o
  ../src/net/Socket.h
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Socket.cpp
-src/net/CMakeFiles/net.dir/TcpConnect.cpp.o
- ../src/base/noncopyable.h
- /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpConnect.cpp
- /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpConnect.h
 src/net/CMakeFiles/net.dir/TcpServer.cpp.o
  ../src/net/Server.h
+ ../src/net/Socket.h
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.cpp
  /home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/TcpServer.h

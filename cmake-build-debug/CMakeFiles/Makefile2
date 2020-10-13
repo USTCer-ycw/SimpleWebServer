@@ -75,19 +75,40 @@ CMAKE_BINARY_DIR = /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-
 # The main recursive "all" target.
 all: CMakeFiles/SimpleWebServer.dir/all
 all: src/net/all
+all: src/base/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/net/preinstall
+preinstall: src/base/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SimpleWebServer.dir/clean
 clean: src/net/clean
+clean: src/base/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory src/base
+
+# Recursive "all" directory target.
+src/base/all: src/base/CMakeFiles/base.dir/all
+
+.PHONY : src/base/all
+
+# Recursive "preinstall" directory target.
+src/base/preinstall:
+
+.PHONY : src/base/preinstall
+
+# Recursive "clean" directory target.
+src/base/clean: src/base/CMakeFiles/base.dir/clean
+
+.PHONY : src/base/clean
 
 #=============================================================================
 # Directory level rules for directory src/net
@@ -112,6 +133,7 @@ src/net/clean: src/net/CMakeFiles/net.dir/clean
 
 # All Build rule for target.
 CMakeFiles/SimpleWebServer.dir/all: src/net/CMakeFiles/net.dir/all
+CMakeFiles/SimpleWebServer.dir/all: src/base/CMakeFiles/base.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimpleWebServer.dir/build.make CMakeFiles/SimpleWebServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimpleWebServer.dir/build.make CMakeFiles/SimpleWebServer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target SimpleWebServer"
@@ -119,7 +141,7 @@ CMakeFiles/SimpleWebServer.dir/all: src/net/CMakeFiles/net.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SimpleWebServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SimpleWebServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/SimpleWebServer.dir/rule
@@ -141,7 +163,7 @@ CMakeFiles/SimpleWebServer.dir/clean:
 src/net/CMakeFiles/net.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target net"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9,10,11,12,13,14,15,16 "Built target net"
 .PHONY : src/net/CMakeFiles/net.dir/all
 
 # Build rule for subdir invocation for target.
@@ -160,6 +182,33 @@ net: src/net/CMakeFiles/net.dir/rule
 src/net/CMakeFiles/net.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/clean
 .PHONY : src/net/CMakeFiles/net.dir/clean
+
+#=============================================================================
+# Target rules for target src/base/CMakeFiles/base.dir
+
+# All Build rule for target.
+src/base/CMakeFiles/base.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=3,4,5 "Built target base"
+.PHONY : src/base/CMakeFiles/base.dir/all
+
+# Build rule for subdir invocation for target.
+src/base/CMakeFiles/base.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/base/CMakeFiles/base.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles 0
+.PHONY : src/base/CMakeFiles/base.dir/rule
+
+# Convenience name for target.
+base: src/base/CMakeFiles/base.dir/rule
+
+.PHONY : base
+
+# clean rule for target.
+src/base/CMakeFiles/base.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/clean
+.PHONY : src/base/CMakeFiles/base.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

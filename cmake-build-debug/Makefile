@@ -156,6 +156,19 @@ net/fast:
 	$(MAKE) $(MAKESILENT) -f src/net/CMakeFiles/net.dir/build.make src/net/CMakeFiles/net.dir/build
 .PHONY : net/fast
 
+#=============================================================================
+# Target rules for targets named base
+
+# Build rule for target.
+base: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base
+.PHONY : base
+
+# fast build rule for target.
+base/fast:
+	$(MAKE) $(MAKESILENT) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/build
+.PHONY : base/fast
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -192,6 +205,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SimpleWebServer"
+	@echo "... base"
 	@echo "... net"
 	@echo "... main.o"
 	@echo "... main.i"

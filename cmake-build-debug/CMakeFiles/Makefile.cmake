@@ -33,6 +33,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
+  "../src/base/CMakeLists.txt"
   "../src/net/CMakeLists.txt"
   )
 
@@ -46,10 +47,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/net/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/base/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/SimpleWebServer.dir/DependInfo.cmake"
   "src/net/CMakeFiles/net.dir/DependInfo.cmake"
+  "src/base/CMakeFiles/base.dir/DependInfo.cmake"
   )
