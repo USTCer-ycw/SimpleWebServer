@@ -4,4 +4,9 @@
 src/base/CMakeFiles/base.dir/FileUtil.cpp.o
  ../src/base/FileUtil.h
  ../src/base/noncopyable.h
- /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/FileUtil.cpp
+ /Users/yaochuanwang/CLionProjects/SimpleWebServer/src/base/FileUtil.cpp
+src/base/CMakeFiles/base.dir/LogFile.cpp.o
+ ../src/base/FileUtil.h
+ ../src/base/LogFile.h
+ ../src/base/noncopyable.h
+ /Users/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogFile.cpp

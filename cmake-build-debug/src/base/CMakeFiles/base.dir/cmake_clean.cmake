@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base.dir/FileUtil.cpp.o"
   "CMakeFiles/base.dir/LogFile.cpp.o"
-  "libbase.a"
   "libbase.pdb"
+  "libbase.a"
 )
 
 # Per-language clean rules from dependency scanning.

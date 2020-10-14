@@ -9,8 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/net.dir/Server.cpp.o"
   "CMakeFiles/net.dir/Socket.cpp.o"
   "CMakeFiles/net.dir/TcpServer.cpp.o"
-  "libnet.a"
   "libnet.pdb"
+  "libnet.a"
 )
 
 # Per-language clean rules from dependency scanning.

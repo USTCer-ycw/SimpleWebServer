@@ -1,4 +1,4 @@
-/home/yaochuanwang/CLion-2020.2.1/clion-2020.2.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/yaochuanwang/CLionProjects/SimpleWebServer
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/yaochuanwang/CLionProjects/SimpleWebServer
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug

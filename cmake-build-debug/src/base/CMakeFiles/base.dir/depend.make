@@ -5,3 +5,8 @@ src/base/CMakeFiles/base.dir/FileUtil.cpp.o: ../src/base/FileUtil.h
 src/base/CMakeFiles/base.dir/FileUtil.cpp.o: ../src/base/noncopyable.h
 src/base/CMakeFiles/base.dir/FileUtil.cpp.o: ../src/base/FileUtil.cpp
 
+src/base/CMakeFiles/base.dir/LogFile.cpp.o: ../src/base/FileUtil.h
+src/base/CMakeFiles/base.dir/LogFile.cpp.o: ../src/base/LogFile.h
+src/base/CMakeFiles/base.dir/LogFile.cpp.o: ../src/base/noncopyable.h
+src/base/CMakeFiles/base.dir/LogFile.cpp.o: ../src/base/LogFile.cpp
+
