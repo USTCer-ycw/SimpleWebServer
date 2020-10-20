@@ -19,6 +19,7 @@
 #include "src/base/Logging.h"
 #include "src/base/TimerId.h"
 #include "src/base/TimerQueue.h"
+#include "src/base/Thread.h"
 using namespace SimpleServer;
 using namespace std;
 
@@ -110,9 +111,27 @@ void test_timer()
     loop.loop();
 }
 
+void hello()
+{
+    printf("hello\n");
+}
+
+void test_thread()
+{
+    std::function<void()> func = hello;
+    Thread thread(func);
+    thread.start();
+//    std::mutex mtx;
+//    unique_lock<std::mutex> lck(mtx);
+//    cout << lck.owns_lock() << endl;
+//    lck.lock();
+}
+
 int main()
 {
 //    AppendFile file("test.txt");
+    test_thread();
+    while(1){}
     test_timer();
     LOG << "ycw";
     LOG << "1234";

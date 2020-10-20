@@ -23,6 +23,8 @@ src/net/Socket.h
 ../src/base/src/net/Socket.h
 src/base/TimerId.h
 ../src/base/src/base/TimerId.h
+atomic
+-
 
 ..//src/base/TimerId.h
 src/base/noncopyable.h

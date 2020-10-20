@@ -185,6 +185,18 @@
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/main.cpp">
 			<Option target="SimpleWebServer"/>
 		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Condition.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/CountDownLatch.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/CountDownLatch.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/CurrentThread.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/FileUtil.cpp">
 			<Option target="base"/>
 		</Unit>
@@ -209,10 +221,19 @@
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Logging.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/MutexLock.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.cpp">
 			<Option target="base"/>
 		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Thread.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Thread.h">
 			<Option target="base"/>
 		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Timer.cpp">

@@ -125,6 +125,33 @@ base/fast:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/build
 .PHONY : base/fast
 
+CountDownLatch.o: CountDownLatch.cpp.o
+
+.PHONY : CountDownLatch.o
+
+# target to build an object file
+CountDownLatch.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/CountDownLatch.cpp.o
+.PHONY : CountDownLatch.cpp.o
+
+CountDownLatch.i: CountDownLatch.cpp.i
+
+.PHONY : CountDownLatch.i
+
+# target to preprocess a source file
+CountDownLatch.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/CountDownLatch.cpp.i
+.PHONY : CountDownLatch.cpp.i
+
+CountDownLatch.s: CountDownLatch.cpp.s
+
+.PHONY : CountDownLatch.s
+
+# target to generate assembly for a file
+CountDownLatch.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/CountDownLatch.cpp.s
+.PHONY : CountDownLatch.cpp.s
+
 FileUtil.o: FileUtil.cpp.o
 
 .PHONY : FileUtil.o
@@ -260,6 +287,33 @@ TImerQueue.cpp.s:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TImerQueue.cpp.s
 .PHONY : TImerQueue.cpp.s
 
+Thread.o: Thread.cpp.o
+
+.PHONY : Thread.o
+
+# target to build an object file
+Thread.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Thread.cpp.o
+.PHONY : Thread.cpp.o
+
+Thread.i: Thread.cpp.i
+
+.PHONY : Thread.i
+
+# target to preprocess a source file
+Thread.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Thread.cpp.i
+.PHONY : Thread.cpp.i
+
+Thread.s: Thread.cpp.s
+
+.PHONY : Thread.s
+
+# target to generate assembly for a file
+Thread.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Thread.cpp.s
+.PHONY : Thread.cpp.s
+
 Timer.o: Timer.cpp.o
 
 .PHONY : Timer.o
@@ -350,6 +404,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... base"
 	@echo "... edit_cache"
+	@echo "... CountDownLatch.o"
+	@echo "... CountDownLatch.i"
+	@echo "... CountDownLatch.s"
 	@echo "... FileUtil.o"
 	@echo "... FileUtil.i"
 	@echo "... FileUtil.s"
@@ -365,6 +422,9 @@ help:
 	@echo "... TImerQueue.o"
 	@echo "... TImerQueue.i"
 	@echo "... TImerQueue.s"
+	@echo "... Thread.o"
+	@echo "... Thread.i"
+	@echo "... Thread.s"
 	@echo "... Timer.o"
 	@echo "... Timer.i"
 	@echo "... Timer.s"
