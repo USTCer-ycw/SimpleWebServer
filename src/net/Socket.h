@@ -11,9 +11,13 @@
 #include <functional>
 namespace SimpleServer
 {
+    namespace Time
+    {
+        class Timer;
+        using TimerCB = std::function<void()>;
+    }
     class Connection;
     class Channel;
-
     using ConnectionPtr = std::shared_ptr<Connection>;
     using ChannelPtr = std::shared_ptr<Channel>;
     using onConnectCB = std::function<void(const ConnectionPtr &)>;

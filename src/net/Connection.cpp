@@ -6,6 +6,7 @@
 #include "src/net/Channel.h"
 #include "src/net/Epoller.h"
 #include "src/net/EventLoop.h"
+#include "src/base/Logging.h"
 using namespace SimpleServer;
 
 //use for UDP
@@ -46,6 +47,10 @@ void Connection::handleRead()
             messageCB_(GuardPtr);
         }
     }
+    else if (n == 0)
+    {
+        handleClose();
+    }
 }
 
 void Connection::shutdownWR()
@@ -71,4 +76,10 @@ void Connection::send(Socket::Buffer &buffer)
 void Connection::handleWrite()
 {
 
+}
+
+void Connection::handleClose()
+{
+    LOG << "read n bytes shutdown write";
+    ::Socket::shutdownWR(channelptr_->getSockfd());
 }

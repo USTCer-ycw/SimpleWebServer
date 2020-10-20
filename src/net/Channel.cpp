@@ -19,6 +19,7 @@ loop_(loop),
 sockfd_(fd),
 defaultsize_(128)
 {
+    printf("channel fd:%d\n", sockfd_);
     buffer_.resize(defaultsize_);
 }
 
@@ -34,9 +35,9 @@ void Channel::handleReadback()
 //    }
     if(readcallback_)
     {
-        int n = Socket::readmessage(sockfd_,buf);
-        printf("%s  line %d ", __FILE__, __LINE__);
-        printf("read %d bytes\n",n);
+//        int n = Socket::readmessage(sockfd_,buf);
+//        printf("%s  line %d ", __FILE__, __LINE__);
+//        printf("read %d bytes\n",n);
         readcallback_();
     }
 //    else
@@ -71,7 +72,7 @@ void Channel::handleEvent()
 //    loop_->acceptChannel_ = 0;
 //    printf("conn fd:%d\n",connfd);
 const int IN_BUT_PEER_CLOSE = EPOLLIN & (~EPOLLRDHUP);
-printf("revent:%d\n",revents_);
+//printf("revent:%d\n",revents_);
     if(revents_ & EPOLLHUP)
     {
         printf("%d\n", EPOLLHUP);

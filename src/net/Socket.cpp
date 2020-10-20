@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <errno.h>
+#include "src/base/Logging.h"
 void Socket::setNonBlock(int fd)
 {
     int oldfd = ::fcntl(fd,F_GETFL,0);
@@ -25,6 +26,7 @@ void Socket::setNonBlock(int fd)
 int Socket::CreateNonBlockFd()
 {
     int sockfd = ::socket(AF_INET,SOCK_STREAM,0);
+    LOG << "create fd" << sockfd;
     printf("create listen fd %d\n",sockfd);
     setNonBlock(sockfd);
     return sockfd;

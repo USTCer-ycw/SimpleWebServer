@@ -17,6 +17,7 @@ namespace SimpleServer
     public:
         Channel(EventLoop *loop, int fd);
         Channel(EventLoop* loop);
+
     public:
         void setEvent(int events) { events_ = events; }
         void sethandleRead(handleRead&& cb) { readcallback_ = cb; }

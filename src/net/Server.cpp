@@ -64,6 +64,7 @@ void Server::handleNewConn()
     {
         ConnectionPtr accPtr = std::make_shared<Connection>(loop_, acceptfd);
         accPtr->setOnConnectCB(connectBack_);
+        accPtr->setOnMessageCB(messageBack_);
         Socket::setNonBlock(acceptfd);
         connectionMap_[acceptfd] = accPtr;
         connectBack_(accPtr);

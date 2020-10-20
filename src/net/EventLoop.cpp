@@ -4,11 +4,13 @@
 
 #include "EventLoop.h"
 #include "src/net/Channel.h"
+#include "src/base/Logging.h"
 using namespace SimpleServer;
 
 EventLoop::EventLoop() :
 poller_(this),
-quit_(false)
+quit_(false),
+timerQueue_(new TimerQueue(this))
 {
 }
 
@@ -26,7 +28,11 @@ void EventLoop::loop()
 
 void EventLoop::addChannelToPoller(Channel *channel)
 {
-    poller_.addChannelToPoller(channel);
+    bool ret = poller_.addChannelToPoller(channel);
+    if(!ret)
+    {
+        LOG << "add to Epoll error";
+    }
 }
 
 void EventLoop::runInLoop()
@@ -36,4 +42,23 @@ void EventLoop::runInLoop()
 //        activeChannels_[i]->setReadHandler(std::bind())
         activeChannels_[i]->handleEvent();
     }
+}
+
+TimerId EventLoop::runAt(Time::TimeStamp time, Time::TimerCB cb)
+{
+    return timerQueue_->addTimer(cb, time, 0);
+//    timerQueue_->addTimer(cb, time, 0);
+}
+
+TimerId EventLoop::runAfter(double delay, TimerCB cb)
+{
+    TimeStamp time(addTime(TimeStamp::now(), delay));
+    return runAt(time, cb);
+}
+
+TimerId EventLoop::runEvery(double interval, TimerCB cb)
+{
+    TimeStamp time(addTime(TimeStamp::now(), interval));
+    return timerQueue_->addTimer(cb, time, interval);
+//    timerQueue_->addTimer(cb, time, interval);
 }

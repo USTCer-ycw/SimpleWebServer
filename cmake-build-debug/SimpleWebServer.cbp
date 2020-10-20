@@ -197,6 +197,42 @@
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogFile.h">
 			<Option target="base"/>
 		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogStream.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogStream.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Logging.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Logging.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Timer.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Timer.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerId.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerId.h">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerQueue.cpp">
+			<Option target="base"/>
+		</Unit>
+		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerQueue.h">
+			<Option target="base"/>
+		</Unit>
 		<Unit filename="/home/yaochuanwang/CLionProjects/SimpleWebServer/src/net/Channel.cpp">
 			<Option target="net"/>
 		</Unit>

@@ -19,6 +19,7 @@ bool Epoll::addChannelToPoller(Channel* channel)
 {
     ev_.events = channel->getEvents();
     ev_.data.fd = channel->getSockfd();
+    printf("fd:%d\n", channel->getSockfd());
     channelMap_[channel->getSockfd()] = channel;
     return epoll_ctl(epollfd_,EPOLL_CTL_ADD,channel->getSockfd(),&ev_) == 0;
 }

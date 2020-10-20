@@ -105,19 +105,175 @@ src/base/CMakeFiles/base.dir/LogFile.cpp.o.provides: src/base/CMakeFiles/base.di
 src/base/CMakeFiles/base.dir/LogFile.cpp.o.provides.build: src/base/CMakeFiles/base.dir/LogFile.cpp.o
 
 
+src/base/CMakeFiles/base.dir/LogStream.cpp.o: src/base/CMakeFiles/base.dir/flags.make
+src/base/CMakeFiles/base.dir/LogStream.cpp.o: ../src/base/LogStream.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/base/CMakeFiles/base.dir/LogStream.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/LogStream.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogStream.cpp
+
+src/base/CMakeFiles/base.dir/LogStream.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/LogStream.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogStream.cpp > CMakeFiles/base.dir/LogStream.cpp.i
+
+src/base/CMakeFiles/base.dir/LogStream.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/LogStream.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/LogStream.cpp -o CMakeFiles/base.dir/LogStream.cpp.s
+
+src/base/CMakeFiles/base.dir/LogStream.cpp.o.requires:
+
+.PHONY : src/base/CMakeFiles/base.dir/LogStream.cpp.o.requires
+
+src/base/CMakeFiles/base.dir/LogStream.cpp.o.provides: src/base/CMakeFiles/base.dir/LogStream.cpp.o.requires
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogStream.cpp.o.provides.build
+.PHONY : src/base/CMakeFiles/base.dir/LogStream.cpp.o.provides
+
+src/base/CMakeFiles/base.dir/LogStream.cpp.o.provides.build: src/base/CMakeFiles/base.dir/LogStream.cpp.o
+
+
+src/base/CMakeFiles/base.dir/Logging.cpp.o: src/base/CMakeFiles/base.dir/flags.make
+src/base/CMakeFiles/base.dir/Logging.cpp.o: ../src/base/Logging.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/base/CMakeFiles/base.dir/Logging.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Logging.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Logging.cpp
+
+src/base/CMakeFiles/base.dir/Logging.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Logging.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Logging.cpp > CMakeFiles/base.dir/Logging.cpp.i
+
+src/base/CMakeFiles/base.dir/Logging.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Logging.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Logging.cpp -o CMakeFiles/base.dir/Logging.cpp.s
+
+src/base/CMakeFiles/base.dir/Logging.cpp.o.requires:
+
+.PHONY : src/base/CMakeFiles/base.dir/Logging.cpp.o.requires
+
+src/base/CMakeFiles/base.dir/Logging.cpp.o.provides: src/base/CMakeFiles/base.dir/Logging.cpp.o.requires
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Logging.cpp.o.provides.build
+.PHONY : src/base/CMakeFiles/base.dir/Logging.cpp.o.provides
+
+src/base/CMakeFiles/base.dir/Logging.cpp.o.provides.build: src/base/CMakeFiles/base.dir/Logging.cpp.o
+
+
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.o: src/base/CMakeFiles/base.dir/flags.make
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.o: ../src/base/TImerQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/base/CMakeFiles/base.dir/TImerQueue.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/TImerQueue.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.cpp
+
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/TImerQueue.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.cpp > CMakeFiles/base.dir/TImerQueue.cpp.i
+
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/TImerQueue.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TImerQueue.cpp -o CMakeFiles/base.dir/TImerQueue.cpp.s
+
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.requires:
+
+.PHONY : src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.requires
+
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.provides: src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.requires
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.provides.build
+.PHONY : src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.provides
+
+src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.provides.build: src/base/CMakeFiles/base.dir/TImerQueue.cpp.o
+
+
+src/base/CMakeFiles/base.dir/Timer.cpp.o: src/base/CMakeFiles/base.dir/flags.make
+src/base/CMakeFiles/base.dir/Timer.cpp.o: ../src/base/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/base/CMakeFiles/base.dir/Timer.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/Timer.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Timer.cpp
+
+src/base/CMakeFiles/base.dir/Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/Timer.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Timer.cpp > CMakeFiles/base.dir/Timer.cpp.i
+
+src/base/CMakeFiles/base.dir/Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/Timer.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/Timer.cpp -o CMakeFiles/base.dir/Timer.cpp.s
+
+src/base/CMakeFiles/base.dir/Timer.cpp.o.requires:
+
+.PHONY : src/base/CMakeFiles/base.dir/Timer.cpp.o.requires
+
+src/base/CMakeFiles/base.dir/Timer.cpp.o.provides: src/base/CMakeFiles/base.dir/Timer.cpp.o.requires
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Timer.cpp.o.provides.build
+.PHONY : src/base/CMakeFiles/base.dir/Timer.cpp.o.provides
+
+src/base/CMakeFiles/base.dir/Timer.cpp.o.provides.build: src/base/CMakeFiles/base.dir/Timer.cpp.o
+
+
+src/base/CMakeFiles/base.dir/TimerId.cpp.o: src/base/CMakeFiles/base.dir/flags.make
+src/base/CMakeFiles/base.dir/TimerId.cpp.o: ../src/base/TimerId.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/base/CMakeFiles/base.dir/TimerId.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/TimerId.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerId.cpp
+
+src/base/CMakeFiles/base.dir/TimerId.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/TimerId.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerId.cpp > CMakeFiles/base.dir/TimerId.cpp.i
+
+src/base/CMakeFiles/base.dir/TimerId.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/TimerId.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerId.cpp -o CMakeFiles/base.dir/TimerId.cpp.s
+
+src/base/CMakeFiles/base.dir/TimerId.cpp.o.requires:
+
+.PHONY : src/base/CMakeFiles/base.dir/TimerId.cpp.o.requires
+
+src/base/CMakeFiles/base.dir/TimerId.cpp.o.provides: src/base/CMakeFiles/base.dir/TimerId.cpp.o.requires
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerId.cpp.o.provides.build
+.PHONY : src/base/CMakeFiles/base.dir/TimerId.cpp.o.provides
+
+src/base/CMakeFiles/base.dir/TimerId.cpp.o.provides.build: src/base/CMakeFiles/base.dir/TimerId.cpp.o
+
+
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.o: src/base/CMakeFiles/base.dir/flags.make
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.o: ../src/base/TimerQueue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/base/CMakeFiles/base.dir/TimerQueue.cpp.o"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base.dir/TimerQueue.cpp.o -c /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerQueue.cpp
+
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base.dir/TimerQueue.cpp.i"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerQueue.cpp > CMakeFiles/base.dir/TimerQueue.cpp.i
+
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base.dir/TimerQueue.cpp.s"
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yaochuanwang/CLionProjects/SimpleWebServer/src/base/TimerQueue.cpp -o CMakeFiles/base.dir/TimerQueue.cpp.s
+
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.requires:
+
+.PHONY : src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.requires
+
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.provides: src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.requires
+	$(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.provides.build
+.PHONY : src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.provides
+
+src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.provides.build: src/base/CMakeFiles/base.dir/TimerQueue.cpp.o
+
+
 # Object files for target base
 base_OBJECTS = \
 "CMakeFiles/base.dir/FileUtil.cpp.o" \
-"CMakeFiles/base.dir/LogFile.cpp.o"
+"CMakeFiles/base.dir/LogFile.cpp.o" \
+"CMakeFiles/base.dir/LogStream.cpp.o" \
+"CMakeFiles/base.dir/Logging.cpp.o" \
+"CMakeFiles/base.dir/TImerQueue.cpp.o" \
+"CMakeFiles/base.dir/Timer.cpp.o" \
+"CMakeFiles/base.dir/TimerId.cpp.o" \
+"CMakeFiles/base.dir/TimerQueue.cpp.o"
 
 # External object files for target base
 base_EXTERNAL_OBJECTS =
 
 src/base/libbase.a: src/base/CMakeFiles/base.dir/FileUtil.cpp.o
 src/base/libbase.a: src/base/CMakeFiles/base.dir/LogFile.cpp.o
+src/base/libbase.a: src/base/CMakeFiles/base.dir/LogStream.cpp.o
+src/base/libbase.a: src/base/CMakeFiles/base.dir/Logging.cpp.o
+src/base/libbase.a: src/base/CMakeFiles/base.dir/TImerQueue.cpp.o
+src/base/libbase.a: src/base/CMakeFiles/base.dir/Timer.cpp.o
+src/base/libbase.a: src/base/CMakeFiles/base.dir/TimerId.cpp.o
+src/base/libbase.a: src/base/CMakeFiles/base.dir/TimerQueue.cpp.o
 src/base/libbase.a: src/base/CMakeFiles/base.dir/build.make
 src/base/libbase.a: src/base/CMakeFiles/base.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libbase.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libbase.a"
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && $(CMAKE_COMMAND) -P CMakeFiles/base.dir/cmake_clean_target.cmake
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug/src/base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base.dir/link.txt --verbose=$(VERBOSE)
 
@@ -128,6 +284,12 @@ src/base/CMakeFiles/base.dir/build: src/base/libbase.a
 
 src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/FileUtil.cpp.o.requires
 src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/LogFile.cpp.o.requires
+src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/LogStream.cpp.o.requires
+src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/Logging.cpp.o.requires
+src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/TImerQueue.cpp.o.requires
+src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/Timer.cpp.o.requires
+src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/TimerId.cpp.o.requires
+src/base/CMakeFiles/base.dir/requires: src/base/CMakeFiles/base.dir/TimerQueue.cpp.o.requires
 
 .PHONY : src/base/CMakeFiles/base.dir/requires
 

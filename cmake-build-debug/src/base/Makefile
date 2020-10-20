@@ -179,6 +179,168 @@ LogFile.cpp.s:
 	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogFile.cpp.s
 .PHONY : LogFile.cpp.s
 
+LogStream.o: LogStream.cpp.o
+
+.PHONY : LogStream.o
+
+# target to build an object file
+LogStream.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogStream.cpp.o
+.PHONY : LogStream.cpp.o
+
+LogStream.i: LogStream.cpp.i
+
+.PHONY : LogStream.i
+
+# target to preprocess a source file
+LogStream.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogStream.cpp.i
+.PHONY : LogStream.cpp.i
+
+LogStream.s: LogStream.cpp.s
+
+.PHONY : LogStream.s
+
+# target to generate assembly for a file
+LogStream.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/LogStream.cpp.s
+.PHONY : LogStream.cpp.s
+
+Logging.o: Logging.cpp.o
+
+.PHONY : Logging.o
+
+# target to build an object file
+Logging.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Logging.cpp.o
+.PHONY : Logging.cpp.o
+
+Logging.i: Logging.cpp.i
+
+.PHONY : Logging.i
+
+# target to preprocess a source file
+Logging.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Logging.cpp.i
+.PHONY : Logging.cpp.i
+
+Logging.s: Logging.cpp.s
+
+.PHONY : Logging.s
+
+# target to generate assembly for a file
+Logging.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Logging.cpp.s
+.PHONY : Logging.cpp.s
+
+TImerQueue.o: TImerQueue.cpp.o
+
+.PHONY : TImerQueue.o
+
+# target to build an object file
+TImerQueue.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TImerQueue.cpp.o
+.PHONY : TImerQueue.cpp.o
+
+TImerQueue.i: TImerQueue.cpp.i
+
+.PHONY : TImerQueue.i
+
+# target to preprocess a source file
+TImerQueue.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TImerQueue.cpp.i
+.PHONY : TImerQueue.cpp.i
+
+TImerQueue.s: TImerQueue.cpp.s
+
+.PHONY : TImerQueue.s
+
+# target to generate assembly for a file
+TImerQueue.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TImerQueue.cpp.s
+.PHONY : TImerQueue.cpp.s
+
+Timer.o: Timer.cpp.o
+
+.PHONY : Timer.o
+
+# target to build an object file
+Timer.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Timer.cpp.o
+.PHONY : Timer.cpp.o
+
+Timer.i: Timer.cpp.i
+
+.PHONY : Timer.i
+
+# target to preprocess a source file
+Timer.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Timer.cpp.i
+.PHONY : Timer.cpp.i
+
+Timer.s: Timer.cpp.s
+
+.PHONY : Timer.s
+
+# target to generate assembly for a file
+Timer.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/Timer.cpp.s
+.PHONY : Timer.cpp.s
+
+TimerId.o: TimerId.cpp.o
+
+.PHONY : TimerId.o
+
+# target to build an object file
+TimerId.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerId.cpp.o
+.PHONY : TimerId.cpp.o
+
+TimerId.i: TimerId.cpp.i
+
+.PHONY : TimerId.i
+
+# target to preprocess a source file
+TimerId.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerId.cpp.i
+.PHONY : TimerId.cpp.i
+
+TimerId.s: TimerId.cpp.s
+
+.PHONY : TimerId.s
+
+# target to generate assembly for a file
+TimerId.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerId.cpp.s
+.PHONY : TimerId.cpp.s
+
+TimerQueue.o: TimerQueue.cpp.o
+
+.PHONY : TimerQueue.o
+
+# target to build an object file
+TimerQueue.cpp.o:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerQueue.cpp.o
+.PHONY : TimerQueue.cpp.o
+
+TimerQueue.i: TimerQueue.cpp.i
+
+.PHONY : TimerQueue.i
+
+# target to preprocess a source file
+TimerQueue.cpp.i:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerQueue.cpp.i
+.PHONY : TimerQueue.cpp.i
+
+TimerQueue.s: TimerQueue.cpp.s
+
+.PHONY : TimerQueue.s
+
+# target to generate assembly for a file
+TimerQueue.cpp.s:
+	cd /home/yaochuanwang/CLionProjects/SimpleWebServer/cmake-build-debug && $(MAKE) -f src/base/CMakeFiles/base.dir/build.make src/base/CMakeFiles/base.dir/TimerQueue.cpp.s
+.PHONY : TimerQueue.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -194,6 +356,24 @@ help:
 	@echo "... LogFile.o"
 	@echo "... LogFile.i"
 	@echo "... LogFile.s"
+	@echo "... LogStream.o"
+	@echo "... LogStream.i"
+	@echo "... LogStream.s"
+	@echo "... Logging.o"
+	@echo "... Logging.i"
+	@echo "... Logging.s"
+	@echo "... TImerQueue.o"
+	@echo "... TImerQueue.i"
+	@echo "... TImerQueue.s"
+	@echo "... Timer.o"
+	@echo "... Timer.i"
+	@echo "... Timer.s"
+	@echo "... TimerId.o"
+	@echo "... TimerId.i"
+	@echo "... TimerId.s"
+	@echo "... TimerQueue.o"
+	@echo "... TimerQueue.i"
+	@echo "... TimerQueue.s"
 .PHONY : help
 
 
